@@ -1,15 +1,17 @@
-﻿using System;
+﻿using InputValidation.View1;
+using InputValidation.View2;
 
 namespace InputValidation
 {
     public class MainWindowViewModel
     {
-        private DateTime _myDate;
+        public ViewModel1 ViewModel1 { get; }
+        public ViewModel2 ViewModel2 { get; }
 
-        public DateTime MyDate
+        public MainWindowViewModel()
         {
-            get => _myDate;
-            set => _myDate = value;
+            ViewModel1 = new View1.ViewModel1();
+            ViewModel2 = new ViewModel2();
         }
     }
 }

@@ -4,20 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InputValidation"
+        xmlns:view1="clr-namespace:InputValidation.View1"
+        xmlns:view2="clr-namespace:InputValidation.View2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
-            <DatePicker>
-                <DatePicker.SelectedDate>
-                    <Binding Path="MyDate" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
-                        <Binding.ValidationRules>
-                            <local:DateValidationRule />
-                        </Binding.ValidationRules>
-                    </Binding>
-                </DatePicker.SelectedDate>
-            </DatePicker>
-            <TextBox/>
-        </StackPanel>
-    </Grid>
+    <TabControl>
+        <TabItem Header="Date I">
+            <view1:View1 DataContext="{Binding ViewModel1}">
+            </view1:View1>
+        </TabItem>
+        <TabItem Header="Date II">
+            <view2:View2 DataContext="{Binding ViewModel2}">
+            </view2:View2>
+        </TabItem>
+    </TabControl>
 </Window>
