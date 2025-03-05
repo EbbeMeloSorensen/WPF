@@ -1,24 +1,25 @@
-﻿<UserControl x:Class="InputValidation.View1.View1"
+﻿<UserControl x:Class="InputValidation.View3.View3"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:view1="clr-namespace:InputValidation.View1"
+             xmlns:local="clr-namespace:InputValidation.View3"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel>
-            <TextBlock Text="using ValidationRule class (in this example date may not be historical)"/>
+            <TextBlock Text="using ExceptionValidationRule (in this example date may not be historical)"/>
             <DatePicker Margin="3">
                 <DatePicker.SelectedDate>
                     <Binding Path="MyDate" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True">
                         <Binding.ValidationRules>
-                            <view1:DateValidationRule/>
+                            <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
                 </DatePicker.SelectedDate>
             </DatePicker>
             <TextBox/>
         </StackPanel>
-    </Grid>
+
+</Grid>
 </UserControl>

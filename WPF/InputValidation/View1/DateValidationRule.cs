@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Controls;
 
-namespace InputValidation
+namespace InputValidation.View1
 {
     public class DateValidationRule : ValidationRule
     {
