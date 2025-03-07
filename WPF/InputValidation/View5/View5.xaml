@@ -5,12 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:InputValidation.View5"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" d:DataContext="{d:DesignInstance local:ViewModel5 }">
+
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel>
+                <Border BorderBrush="Red" BorderThickness="2">
+                    <AdornedElementPlaceholder />
+                </Border>
+                <TextBlock Foreground="Red" FontWeight="Bold"
+                           Text="{Binding [0].ErrorContent, RelativeSource={RelativeSource AncestorType=AdornerDecorator}}"
+                           Margin="5,2,0,0"/>
+            </StackPanel>
+        </ControlTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <StackPanel>
-            <TextBlock Text="Using IDataErrorInfo in a special way class (in this example end date must be later than start date)"/>
-            <DatePicker Margin="3" SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
-            <DatePicker Margin="3" SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
+            <TextBlock Text="Using IDataErrorInfo in a special way (in this example end date must be later than start date)"/>
+            <DatePicker Margin="3"
+                        SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                        Validation.ErrorTemplate="{StaticResource ErrorTemplate}"/>
+            <DatePicker Margin="3"
+                        SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                        Validation.ErrorTemplate="{StaticResource ErrorTemplate}"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Using IDataErrorInfo in a special way class (in this example end date must be later than start date)"/>
+            <TextBlock Text="Using IDataErrorInfo in a special way (in this example end date must be later than start date)"/>
             <DatePicker Margin="3" SelectedDate="{Binding StartDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
             <DatePicker Margin="3" SelectedDate="{Binding EndDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
         </StackPanel>
