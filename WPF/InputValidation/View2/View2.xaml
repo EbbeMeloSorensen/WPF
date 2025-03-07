@@ -9,7 +9,9 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="using IDataErrorInfo (in this example date may not be historical)"/>
-            <DatePicker Margin="3" SelectedDate="{Binding MyDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
+            <TextBox Text="{Binding MyString, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+            <DatePicker Margin="3"
+                        SelectedDate="{Binding MyDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" />
             <TextBox/>
         </StackPanel>
     </Grid>

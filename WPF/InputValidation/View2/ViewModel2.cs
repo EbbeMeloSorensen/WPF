@@ -5,7 +5,18 @@ namespace InputValidation.View2
 {
     public class ViewModel2 : INotifyPropertyChanged, IDataErrorInfo
     {
+        private string _myString;
         private DateTime? _myDate;
+
+        public string MyString
+        {
+            get => _myString;
+            set
+            {
+                _myString = value;
+                OnPropertyChanged(nameof(MyString));
+            }
+        }
 
         public DateTime? MyDate
         {
@@ -27,7 +38,14 @@ namespace InputValidation.View2
         {
             get
             {
-                if (columnName == nameof(MyDate))
+                if (columnName == nameof(MyString))
+                {
+                    if (string.IsNullOrEmpty(MyString))
+                    {
+                        return "Strign is required.";
+                    }
+                }
+                else if (columnName == nameof(MyDate))
                 {
                     if (MyDate == null)
                     {
@@ -38,6 +56,7 @@ namespace InputValidation.View2
                         return "Date cannot be in the past.";
                     }
                 }
+
                 return null;
             }
         }
