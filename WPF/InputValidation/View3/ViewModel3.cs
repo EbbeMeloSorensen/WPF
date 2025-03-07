@@ -5,9 +5,9 @@ namespace InputValidation.View3
 {
     public class ViewModel3 : INotifyPropertyChanged
     {
-        private DateTime _myDate;
+        private DateTime? _myDate;
 
-        public DateTime MyDate
+        public DateTime? MyDate
         {
             get => _myDate;
             set

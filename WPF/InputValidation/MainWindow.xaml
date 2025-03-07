@@ -7,7 +7,6 @@
         xmlns:view2="clr-namespace:InputValidation.View2"
         xmlns:view3="clr-namespace:InputValidation.View3"
         xmlns:view4="clr-namespace:InputValidation.View4"
-        xmlns:view5="clr-namespace:InputValidation.View5"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <TabControl>
@@ -22,9 +21,6 @@
         </TabItem>
         <TabItem Header="Date Range I">
             <view4:View4 DataContext="{Binding ViewModel4}"/>
-        </TabItem>
-        <TabItem Header="Date Range II">
-            <view5:View5 DataContext="{Binding ViewModel5}"/>
         </TabItem>
     </TabControl>
 </Window>
