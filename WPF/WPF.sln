@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InputValidation", "InputVal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputValidation2", "InputValidation2\InputValidation2.csproj", "{67E0DEC1-84E7-4C2E-BFF6-14AFAFEA6C96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D_1", "3D_1\3D_1.csproj", "{EC89502D-31EC-4847-83B8-2B878C12B614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D_2", "3D_2\3D_2.csproj", "{96235B76-2A49-4540-B1E6-6783DA1748C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{67E0DEC1-84E7-4C2E-BFF6-14AFAFEA6C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E0DEC1-84E7-4C2E-BFF6-14AFAFEA6C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E0DEC1-84E7-4C2E-BFF6-14AFAFEA6C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC89502D-31EC-4847-83B8-2B878C12B614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC89502D-31EC-4847-83B8-2B878C12B614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC89502D-31EC-4847-83B8-2B878C12B614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC89502D-31EC-4847-83B8-2B878C12B614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96235B76-2A49-4540-B1E6-6783DA1748C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96235B76-2A49-4540-B1E6-6783DA1748C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96235B76-2A49-4540-B1E6-6783DA1748C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96235B76-2A49-4540-B1E6-6783DA1748C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
