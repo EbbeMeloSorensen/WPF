@@ -1,0 +1,64 @@
+﻿<Window x:Class="_3D_6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3D_6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Viewport3D Name="viewport">
+
+            <!-- Camera -->
+            <Viewport3D.Camera>
+                <PerspectiveCamera 
+                    Position="0, 1.5, 5"
+                    LookDirection="0,-0.2,-1"
+                    UpDirection="0,1,0"
+                    FieldOfView="50"/>
+            </Viewport3D.Camera>
+
+            <!-- Dim ambient so the point light matters -->
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <AmbientLight Color="#202020"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+
+            <!-- MOVING POINT LIGHT -->
+            <ModelVisual3D x:Name="MovingLightHost">
+                <ModelVisual3D.Content>
+                    <PointLight 
+                        x:Name="PlayerLight"
+                        Color="White"
+                        Range="10" 
+                        ConstantAttenuation="1"
+                        LinearAttenuation="0.2"
+                        QuadraticAttenuation="0.05"
+                        Position="0,2,0"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+
+            <!-- A shiny sphere -->
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <GeometryModel3D x:Name="Sphere">
+                        <GeometryModel3D.Material>
+                            <MaterialGroup>
+                                <!-- Key trick: Opacity < 1 so WPF actually computes lighting -->
+                                <DiffuseMaterial>
+                                    <DiffuseMaterial.Brush>
+                                        <SolidColorBrush Color="Orange" Opacity="0.99"/>
+                                    </DiffuseMaterial.Brush>
+                                </DiffuseMaterial>
+                                <SpecularMaterial Brush="White" SpecularPower="50"/>
+                            </MaterialGroup>
+                        </GeometryModel3D.Material>
+                    </GeometryModel3D>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+
+        </Viewport3D>
+    </Grid>
+</Window>
