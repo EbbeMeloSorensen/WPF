@@ -1,31 +1,36 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using GalaSoft.MvvmLight;
 
 namespace KeyboardInput3.ViewModels
 {
-    public class SubviewViewModel : INotifyPropertyChanged
+    public class SubviewViewModel : ViewModelBase
     {
         private bool _shouldFocusInput;
         public bool ShouldFocusInput
         {
             get => _shouldFocusInput;
-            set { _shouldFocusInput = value; OnPropertyChanged(); }
+            set
+            {
+                _shouldFocusInput = value; 
+                RaisePropertyChanged();
+            }
         }
 
         private string _inputText;
         public string InputText
         {
             get => _inputText;
-            set { _inputText = value; OnPropertyChanged(); }
+            set
+            {
+                _inputText = value;
+                RaisePropertyChanged();
+            }
         }
 
         public void FocusInput()
         {
             ShouldFocusInput = true;
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string name = null)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }

@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeyboardInput3"
         xmlns:views="clr-namespace:KeyboardInput3.Views"
+        xmlns:viewModels="clr-namespace:KeyboardInput3.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModels:SubviewViewModel}">
+            <views:SubView/>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        <views:SubView DataContext="{Binding SubviewVM}"/>
+        <!--<views:SubView DataContext="{Binding SubviewVM}"/>-->
+        <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>
