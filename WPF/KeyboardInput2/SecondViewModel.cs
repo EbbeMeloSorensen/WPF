@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
 
 namespace KeyboardInput2;
 
@@ -10,7 +11,7 @@ public class SecondViewModel
     {
         GoToFirstViewCommand = new RelayCommand(_ =>
         {
-            var mainVM = (MainWindowViewModel)App.Current.MainWindow.DataContext;
+            var mainVM = (MainWindowViewModel) App.Current.MainWindow.DataContext;
             mainVM.CurrentViewModel = new FirstViewModel();
         });
     }
