@@ -1,0 +1,16 @@
+﻿<Application x:Class="KeyboardInput4.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:KeyboardInput4"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- DataTemplates: map VM -> View -->
+        <DataTemplate DataType="{x:Type local:FirstViewModel}">
+            <local:FirstView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:SecondViewModel}">
+            <local:SecondView />
+        </DataTemplate>         
+    </Application.Resources>
+</Application>
