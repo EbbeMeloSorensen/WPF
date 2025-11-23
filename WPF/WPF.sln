@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardInput3", "KeyboardI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardInput4", "KeyboardInput4\KeyboardInput4.csproj", "{AA8E895F-9A31-4D20-9534-E80D26AA5F6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardInput6", "KeyboardInput6\KeyboardInput6.csproj", "{CDC6926A-E665-42A6-BD8D-1E46D720B9DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{AA8E895F-9A31-4D20-9534-E80D26AA5F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA8E895F-9A31-4D20-9534-E80D26AA5F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA8E895F-9A31-4D20-9534-E80D26AA5F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDC6926A-E665-42A6-BD8D-1E46D720B9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC6926A-E665-42A6-BD8D-1E46D720B9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC6926A-E665-42A6-BD8D-1E46D720B9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC6926A-E665-42A6-BD8D-1E46D720B9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

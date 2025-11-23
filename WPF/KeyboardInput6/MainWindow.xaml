@@ -1,0 +1,22 @@
+<Window x:Class="WpfFocusFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:beh="clr-namespace:WpfFocusFinal.Behaviors"
+        Title="Focus Demo" Height="250" Width="500">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
+            <Button Content="Show First" Width="100" Margin="0,0,8,0" Command="{Binding ShowFirstCommand}" />
+            <Button Content="Show Second" Width="100" Command="{Binding ShowSecondCommand}" />
+        </StackPanel>
+
+        <ContentControl Grid.Row="1"
+                        Content="{Binding CurrentViewModel}"
+                        Focusable="True"
+                        beh:FocusOnContentBehavior.Enable="True"/>
+    </Grid>
+</Window>
