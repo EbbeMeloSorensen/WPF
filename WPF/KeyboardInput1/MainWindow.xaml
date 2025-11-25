@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:KeyboardInput1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
-    <Grid Background="White">
+    <Grid>
         <ContentControl Content="{Binding Subview}" />
     </Grid>
 </Window>

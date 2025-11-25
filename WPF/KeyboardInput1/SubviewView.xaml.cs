@@ -24,12 +24,21 @@ namespace KeyboardInput1
         public SubviewView()
         {
             InitializeComponent();
-            this.PreviewKeyDown += OnPreviewKeyDown;
         }
 
         private void OnPreviewKeyDown(object sender, KeyEventArgs e)
         {
             Debug.WriteLine($"SubviewView received key: {e.Key}");
+        }
+
+        private void SubviewView_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            Keyboard.Focus(this);
+        }
+
+        private void SubviewView_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show($"UserControl received key: {e.Key}");
         }
     }
 }

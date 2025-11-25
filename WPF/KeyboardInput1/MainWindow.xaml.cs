@@ -24,7 +24,11 @@ namespace KeyboardInput1
             DataContext = this;
 
             // IMPORTANT: move focus to content on startup
-            Loaded += (_, __) => Keyboard.Focus((UIElement)Content);
+            Loaded += (_, __) =>
+            {
+                var obj = (UIElement) Content;
+                Keyboard.Focus(obj);
+            };
         }
     }
 }
