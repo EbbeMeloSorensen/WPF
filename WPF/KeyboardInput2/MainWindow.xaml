@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:KeyboardInput2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
-    </Grid>
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:SubviewAViewModel}">
+            <local:SubViewA />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:SubviewBViewModel}">
+            <local:SubViewB />
+        </DataTemplate>
+    </Window.Resources>
+
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button Content="Show A" Command="{Binding ShowACommand}" Margin="5"/>
+            <Button Content="Show B" Command="{Binding ShowBCommand}" Margin="5"/>
+        </StackPanel>
+
+        <ContentControl Content="{Binding CurrentViewModel}"
+                        local:FocusOnLoadBehavior.Enabled="True" />
+    </DockPanel>
 </Window>
